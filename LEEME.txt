@@ -1,0 +1,15 @@
+CAMBIODESK - PASOS (sin tecnicismos)
+SUPABASE
+1. Crea un proyecto nuevo en supabase.com.
+2. Authentication > Sign In / Providers > Email: DESACTIVA "Confirm email".
+3. SQL Editor > New query: pega TODO el archivo supabase/schema.sql y pulsa Run (una sola vez).
+4. Authentication > Users > Add user: crea TU usuario con correo y contraseña. El primero queda como administrador.
+5. Project Settings > API: copia "Project URL" y la clave pública (anon / publishable).
+6. Abre el archivo .env y reemplaza los dos valores. NUNCA uses la clave "service_role".
+7. No necesitas buckets: esta versión no guarda archivos.
+
+NETLIFY
+8. Sube la carpeta a GitHub y conéctala en Netlify (Add new site > Import from Git). Build: npm run build, carpeta: dist (ya está en netlify.toml).
+9. Site settings > Environment variables: agrega VITE_SUPABASE_URL y VITE_SUPABASE_ANON_KEY con los mismos valores.
+10. Deploy y abre la URL. Ingresa con tu usuario.
+Más usuarios: dentro de la app, menú Configuración > Usuarios.
